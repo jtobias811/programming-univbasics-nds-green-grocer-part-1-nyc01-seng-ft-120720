@@ -22,11 +22,11 @@ def consolidate_cart(cart)
       if consolidated_cart.include?(item)
         consolidated_cart[item][:count] += 1
       else
-        consolidated_cart[item] = {
+        consolidated_cart[item] = [
           :price => info[:price]
           :clearance => info[:clearance]
           :count => 1
-        }
+        ]
       end
     end
   end
